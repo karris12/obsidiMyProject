@@ -1,0 +1,27 @@
+How it works:
+Main Menu Loop:
+The while loop presents a menu to the user with options to view the towns, restaurants, 
+or interesting places in Toronto. The user can also exit the program.
+
+Populating Data:
+The lists are populated using methods (populateTowns(), populateRestaurants(), 
+populatePlaces()), which add predefined data to the lists.
+
+Input Validation:
+The method getValidChoice() ensures that the user input is valid (between 1 and 4). 
+If the user enters an invalid choice, it prompts them again.
+
+Displaying Data:
+Once the user selects a valid option, the displayList() method is called to show the 
+respective data (towns, restaurants, or places).
+
+Exit Option:
+The user can select "4" to exit the application, and it will display a goodbye message.
+
+Next Steps:
+Enhance the UI: You can enhance the user interface or create a more complex layout, 
+but for a simple console-based app, this should work as a great starting point.
+Implement SOLID principles: We have already applied the Single Responsibility Principle 
+(SRP) in creating separate methods for different functionalities 
+(data population, display, input validation). 
+If needed, you can split the methods further for more specific tasks.
