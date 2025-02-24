@@ -1,20 +1,15 @@
 package model;
 
-public class Town {
-    private String name;
+//Town class inherits from Location
+public class Town extends Location {
+ // Constructor for Town, calls the parent class constructor
+ public Town(String name) {
+     super(name);  // Call the superclass (Location) constructor
+ }
 
-    // Constructor
-    public Town(String name) {
-        this.name = name;
-    }
-
-    // Getter for name
-    public String getName() {
-        return name;
-    }
-
-    // Setter for name (optional)
-    public void setName(String name) {
-        this.name = name;
-    }
+ // Override the showInfo method to customize the display for towns
+ @Override
+ public void showInfo() {
+     System.out.println("Town: " + getName());  // Polymorphism: Behavior specific to Town
+ }
 }

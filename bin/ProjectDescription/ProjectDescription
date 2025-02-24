@@ -25,3 +25,19 @@ Implement SOLID principles: We have already applied the Single Responsibility Pr
 (SRP) in creating separate methods for different functionalities 
 (data population, display, input validation). 
 If needed, you can split the methods further for more specific tasks.
+
+
+
+Explanation:
+Encapsulation: Each Location (and its subclasses) encapsulates the name property.
+Abstraction: We abstract away the details of how locations are displayed and focus only on the names (via showInfo()).
+Polymorphism: The showInfo() method behaves differently depending on whether the object is a Town, Restaurant, or Place.
+The showLocationsOfType method uses polymorphism to display only the locations of the type that the user selects (e.g., only towns, restaurants, or places).
+How It All Comes Together:
+Inheritance: We introduced a common base class Location, and each specific type of location (Town, Restaurant, Place) extends it. This promotes code reuse and eliminates redundancy.
+Encapsulation: Data like the name of the location is hidden inside private fields, and only getter methods (getName()) are exposed for external access.
+Abstraction: The showInfo() method is abstracted from the user. They don't need to know how the details are being fetched or formatted — they just see the output.
+Polymorphism: The showInfo() method is overridden in each subclass (Town, Restaurant, Place), providing customized behavior for each type of location. We also used polymorphism to allow the app to handle different types of locations in a unified way, such as with the showLocationsOfType() method.
+Summary:
+OOP principles like Encapsulation, Abstraction, Inheritance, and Polymorphism are fully implemented in the app, making the code modular, extensible, and easy to maintain.
+The app can now easily add more location types (e.g., Museum, Park, etc.) in the future by simply extending the Location class without affecting the rest of the code.

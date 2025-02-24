@@ -1,17 +1,15 @@
 package model;
 
-public class Restaurant {
-    private String name;
+//Restaurant class inherits from Location
+public class Restaurant extends Location {
+ // Constructor for Restaurant, calls the parent class constructor
+ public Restaurant(String name) {
+     super(name);  // Call the superclass (Location) constructor
+ }
 
-    public Restaurant(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
+ // Override the showInfo method to customize the display for restaurants
+ @Override
+ public void showInfo() {
+     System.out.println("Restaurant: " + getName());  // Polymorphism: Behavior specific to Restaurant
+ }
 }
